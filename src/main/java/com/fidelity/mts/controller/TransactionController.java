@@ -11,7 +11,8 @@ import com.fidelity.mts.service.TransactionService;
 import jakarta.validation.Valid;
 
 @RestController
-@RequestMapping("/api/v")
+@RequestMapping("/api/v1")
+@CrossOrigin(origins = "http://localhost:4200")
 public class TransactionController {
 
     @Autowired

@@ -12,14 +12,13 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.fidelity.mts.dto.AccountResponse;
-import com.fidelity.mts.entity.Account;
 import com.fidelity.mts.entity.TransactionLog;
 import com.fidelity.mts.repo.TransactionRepo;
 import com.fidelity.mts.service.AccountService;
 
 @RestController
 @RequestMapping("/api/v1/accounts")
-@CrossOrigin(origins = "*")
+@CrossOrigin(origins = "http://localhost:4200")
 public class AccountController {
 	@Autowired
 	AccountService service;
@@ -27,8 +26,7 @@ public class AccountController {
 	@Autowired 
 	private TransactionRepo transactionRepo;
 	
-	@Autowired
-    public AccountController(AccountService accountService) {
+	public AccountController(AccountService accountService) {
         this.service = accountService;
     }
     
